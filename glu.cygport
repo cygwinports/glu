@@ -1,0 +1,20 @@
+NAME="glu"
+VERSION=9.0.0
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="OpenGL utility library"
+DESCRIPTION="The OpenGL Utility Library (GLU) provides a number of functions
+that use the base OpenGL library to provide higher-level drawing routines from
+the more primitive routines that OpenGL provides."
+HOMEPAGE="http://mesa3d.org/"
+SRC_URI="ftp://ftp.freedesktop.org/pub/mesa/glu/glu-${VERSION}.tar.bz2"
+
+PKG_NAMES="libGLU1 libGLU-devel"
+libGLU1_SUMMARY="${SUMMARY} (runtime)"
+libGLU1_CONTENTS="usr/bin/cygGLU-1.dll"
+libGLU_devel_SUMMARY="${SUMMARY} (development)"
+libGLU_devel_CONTENTS="usr/include/ usr/lib/"
+
+MAKEOPTS+=" VISIBILITY_CFLAGS= VISIBILITY_CXXFLAGS= "
+
+KEEP_LA_FILES="none"
